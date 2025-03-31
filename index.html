@@ -49,7 +49,7 @@
                           'de-entrance': {
                               '0%': { transform: 'translateX(-100vw)', opacity: '0' },
                               '50%': { transform: 'translateX(0)', opacity: '1' },
-                              '100%': { transform: 'translateX(-0.5em)', opacity: '1' }
+                              '100%': { transform: 'translateX(-0.3em)', opacity: '1' }
                           }
                       },
                       animation: {
@@ -60,16 +60,25 @@
           }
       </script>
       <style>
-          canvas {
-              position: fixed;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              z-index: -1;
-          }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Verdana', 'Arial', sans-serif !important;
+}
+
+#canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    pointer-events: none;
+}
       </style>
-         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6084312783725533" crossorigin="anonymous" type="a6cbfc5760b43ebb773269cb-text/javascript"></script>
          <script async src="https://www.googletagmanager.com/gtag/js?id=G-03F8ZHB8D8%22%3E" type="a6cbfc5760b43ebb773269cb-text/javascript">
          </script>
          <script type="a6cbfc5760b43ebb773269cb-text/javascript">
@@ -80,6 +89,10 @@
          gtag('js', new Date());
          gtag('config', 'G-03F8ZHB8D8');
          </script>
+
+         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6084312783725533"
+     crossorigin="anonymous"></script>
+         
    </head>
    <body class="bg-black">
       <canvas id="canvas"></canvas>
@@ -91,24 +104,25 @@
              </div>
              <a 
                  href="/g" 
-                 class="px-14 py-3 bg-neutral-950 border border-neutral-900 rounded-lg text-white hover:bg-neutral-900 transition-all duration-300 self-center translate-x-5"
-             >
-                 Games
+                 class="px-14 py-3 bg-neutral-900 border border-neutral-700 rounded-lg text-white hover:bg-neutral-600 transition-all duration-300 self-center translate-x-3"
+             >🎮 Games
              </a>
          </div>
          
               <form id="uv-form" class="space-y-4 -translate-y-2">
-                  <input id="uv-search-engine" value="https://4get.ca/web?s=" type="hidden"/> 
+                  <input id="uv-search-engine" value="https://www.mojeek.com/search?q=%s" type="hidden"/> 
                   <input 
                       id="uv-address" 
                       type="text" 
-                      placeholder="Freedom's awaiting you." 
+                      placeholder="🔍 Freedom's awaiting you." 
                       required
-                      class="w-full px-4 py-3 bg-neutral-950 border border-neutral-900 rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900 transition-all duration-300"
+                      class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-800 transition-all duration-300"
                   />
               </form>
-              <small class="text-neutral-500">This is not Vault v7. Be sure to join the <a class="underline" href="https://discord.gg/UnDrzQQksw">Discord</a> for new updates.
-            <br><br>You might get a failed search when you initially load in. Refresh the page, and the service worker should register.
+              <small class="text-neutral-400">
+                The fastest static proxy ever.<br>
+                Join the <a class="underline" href="https://discord.gg/UnDrzQQksw">Discord</a> for new updates.
+            <br>Any failed search should correct with hard refreshing.
             </small>
   
               <div class="desc left-margin text-neutral-400">

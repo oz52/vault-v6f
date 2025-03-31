@@ -41,11 +41,25 @@
       }
       </script>
       <style>
-        body {
-            font-family: 'Inter', 'Verdana', 'Arial', sans-serif !important;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Verdana', 'Arial', sans-serif !important;
+}
+
+#canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    pointer-events: none;
+}
       </style>
-               <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6084312783725533" crossorigin="anonymous" type="a6cbfc5760b43ebb773269cb-text/javascript"></script>
                <script async src="https://www.googletagmanager.com/gtag/js?id=G-03F8ZHB8D8%22%3E" type="a6cbfc5760b43ebb773269cb-text/javascript">
                </script>
                <script type="a6cbfc5760b43ebb773269cb-text/javascript">
@@ -56,6 +70,9 @@
                gtag('js', new Date());
                gtag('config', 'G-03F8ZHB8D8');
                </script>
+
+               <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6084312783725533"
+               crossorigin="anonymous"></script>
    </head>
    <body class="bg-black">
     <div class="text-white min-h-screen flex flex-col overflow-hidden">
@@ -65,21 +82,21 @@
                  <h1 class="text-3xl font-bold">Vault V6-f - Games</h1>
                  <a 
                  href="/"
-                 class="px-10 py-3 bg-neutral-950 border border-neutral-900 rounded-lg text-white transition-all duration-300 hover:bg-neutral-900"
-             >Home</a>
+                 class="px-10 py-3 bg-neutral-900 border border-neutral-700 rounded-lg text-white transition-all duration-300 hover:bg-neutral-700"
+             >🏠 Home</a>
                  <input 
                      id="search-input" 
                      type="text" 
-                     placeholder="Search games" 
-                     class="flex-grow px-4 py-3 bg-neutral-950 border border-neutral-900 rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900 transition-all duration-300"
+                     placeholder="🔍 Search games" 
+                     class="flex-grow px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-800 transition-all duration-300"
                  />
              </div>
 
              <div class="container text-center relative">
                 <div id="game-container" class="mt-4 hidden">
-                    <iframe id="game-iframe" src="" class="w-full h-[80vh] bg-neutral-950 rounded-lg"></iframe>
-                    <button id="fullscreen-btn" class="mt-2 px-14 py-3 bg-neutral-950 border border-neutral-900 rounded-lg text-white hover:bg-neutral-900 transition-all duration-300">
-                        Fullscreen
+                    <iframe title="Gxme frame" id="game-iframe" src="" class="w-full h-[80vh] bg-neutral-900 rounded-lg"></iframe>
+                    <button id="fullscreen-btn" class="mt-2 px-14 py-3 bg-neutral-900 border border-neutral-700 rounded-lg text-white hover:bg-neutral-900 transition-all duration-300">
+                        ⛶ Fullscreen
                     </button>
                 </div>
                 <div class="grid grid-cols-3 md:grid-cols-6 gap-4 mt-4" id="game-grid">
@@ -107,7 +124,7 @@
           gameGrid.innerHTML = '';
           gamesToRender.forEach(game => {
               const gameCard = document.createElement('div');
-              gameCard.classList.add('bg-neutral-950', 'border', 'border-neutral-900', 'rounded-lg', 'overflow-hidden', 'transition-all', 'duration-300', 'hover:scale-105', 'cursor-pointer');
+              gameCard.classList.add('bg-neutral-900', 'border', 'border-neutral-700', 'rounded-lg', 'overflow-hidden', 'transition-all', 'duration-250', 'hover:scale-105', 'cursor-pointer');
               gameCard.innerHTML = `
                   <img src="${game.imgSrc}" alt="${game.title}" class="w-full h-32 object-cover">
                   <div class="p-2 text-center text-white text-sm">${game.title}</div>
